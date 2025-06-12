@@ -337,7 +337,8 @@ const marKup = galleryItems
         </div>
       </li>`
   )
-  .join();
+  .join(" ");
+   console.log(marKup);
 imgLoader.insertAdjacentHTML("beforeend", marKup);
 
 //CArs form and listStyle
