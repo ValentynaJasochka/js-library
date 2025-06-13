@@ -1,143 +1,9 @@
-// import { cars } from "./cars";
-const cars = [
-  {
-    id: 1,
-    model: "BMW",
-    type: "5 series",
-    price: 24300,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-  {
-    id: 2,
-    model: "Honda",
-    type: "Civic",
-    price: 7800,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-  {
-    id: 3,
-    model: "Audi",
-    type: "Q7",
-    price: 16000,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-  {
-    id: 4,
-    model: "Honda",
-    type: "Accord",
-    price: 20000,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-  {
-    id: 5,
-    model: "BMW",
-    type: "5 series",
-    price: 14500,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-  {
-    id: 6,
-    model: "Honda",
-    type: "Accord",
-    price: 22500,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-  {
-    id: 7,
-    model: "Honda",
-    type: "C40",
-    price: 19500,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-  {
-    id: 8,
-    model: "Mini",
-    type: "Cupper",
-    price: 12000,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-  {
-    id: 9,
-    model: "BMW",
-    type: "Sport",
-    price: 8000,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-  {
-    id: 10,
-    model: "Volvo",
-    type: "Accord",
-    price: 20000,
-    img: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260",
-  },
-];
-// import { galleryItems } from "./gallery-items";
-// console.log(galleryItems[1]);
-const galleryItems = [
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820_1280.jpg",
-    description: "Hokkaido Flower",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg",
-    description: "Container Haulage Freight",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg",
-    description: "Aerial Beach View",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg",
-    description: "Flower Blooms",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg",
-    description: "Alpine Mountains",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg",
-    description: "Mountain Lake Sailing",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",
-    description: "Alpine Spring Meadows",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",
-    description: "Nature Landscape",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
-    description: "Lighthouse Coast Sea",
-  },
-];
+import SimpleLightbox from "simplelightbox";
+
+import { cars } from "./cars";
+import { galleryItems } from "./gallery-items";
+
+
 const selectors = {
   lodashSearch: document.querySelector(".js-lodash"),
   title: document.querySelector(".js-title"),
@@ -338,7 +204,6 @@ const marKup = galleryItems
       </li>`
   )
   .join(" ");
-   console.log(marKup);
 imgLoader.insertAdjacentHTML("beforeend", marKup);
 
 //CArs form and listStyle
