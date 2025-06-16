@@ -1,4 +1,5 @@
 import SimpleLightbox from "simplelightbox";
+import { handlerClickForTikTakToe, resetGameForTikTakToe, checkWinnerForTikTakToe } from "../helpers/helper-tiktaktoe";
 
 import { cars } from "./cars";
 import { galleryItems } from "./gallery-items";
@@ -49,7 +50,7 @@ lodashSearch.addEventListener(
 function handlerDebounceSearch(evt) {
   console.log(evt.target.value);
 }
-// GAme
+// tic tac toe game
 function gameMarkup() {
   let gameMarkup = "";
   for (let i = 0; i < 9; i += 1) {
@@ -71,41 +72,7 @@ const combinations = [
   [1, 5, 9],
   [3, 5, 7],
 ];
-gameContainer.addEventListener("click", handlerClick);
-function handlerClick(evt) {
-  if (evt.target === evt.currentTarget || evt.target.textContent) {
-    return;
-  }
-  let isWinner = false;
-  let id = Number(evt.target.dataset.id);
-  if (player === "X") {
-    historyX.push(id);
-    isWinner = historyX.length >= 3 ? checkWinner(historyX) : false;
-  } else {
-    historyO.push(id);
-    isWinner = historyO.length >= 3 ? checkWinner(historyO) : false;
-  }
-
-  if (isWinner) {
-    const instance = basicLightbox.create(`
-     <div class ="box"> <h1>Player ${player} is winner</h1></div>
-    `);
-    instance.show();
-    resetGame();
-    return;
-  }
-  evt.target.textContent = player;
-  player = player === "X" ? "O" : "X";
-}
-function checkWinner(arr) {
-  return combinations.some((item) => item.every((id) => arr.includes(id)));
-}
-function resetGame() {
-  gameMarkup();
-  player = "X";
-  historyX.splice(0);
-  historyO.splice(0);
-}
+gameContainer.addEventListener("click", handlerClickForTikTakToe);
 
 //Color box, event bubbling;
 colorBox.addEventListener("click", handlerColorBox);
