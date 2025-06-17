@@ -270,15 +270,12 @@ function queueTime(arr, box) {
   for (let i = 1; i <= box; i += 1) {
     obj[i] = 0;
   }
-  console.log(obj);
-
   arr.reduce((acc, item) => {
     acc[Object.values(acc).indexOf(Math.min(...Object.values(acc))) + 1] += item;
       return acc;
   }, obj);
-  console.log(obj);
   return obj;
 }
-queueTime([5, 12, 8, 6, 3, 7, 6, 4, 15, 9], 3);
+console.log(queueTime([5, 12, 8, 6, 3, 7, 6, 4, 15, 9], 3));
 
 export { gameMarkup };
