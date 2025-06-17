@@ -1,24 +1,27 @@
-import SimpleLightbox from "simplelightbox";
-import { handlerClickForTikTakToe, resetGameForTikTakToe, checkWinnerForTikTakToe } from "../helpers/helper-tiktaktoe";
+import SimpleLightbox from 'simplelightbox';
+import {
+  handlerClickForTikTakToe,
+  resetGameForTikTakToe,
+  checkWinnerForTikTakToe,
+} from '../helpers/helper-tiktaktoe';
 
-import { cars } from "./cars";
-import { galleryItems } from "./gallery-items";
-
+import { cars } from './cars';
+import { galleryItems } from './gallery-items';
 
 const selectors = {
-  lodashSearch: document.querySelector(".js-lodash"),
-  title: document.querySelector(".js-title"),
-  comment: document.querySelector(".js-comment"),
-  list: document.querySelector(".js-list"),
-  carsList: document.querySelector(".js-cars-list"),
-  carsForm: document.querySelector(".js-cars-form"),
-  addBtn: document.querySelector(".js-add-btn"),
-  subtractBtn: document.querySelector(".js-subtract-btn"),
-  counter: document.querySelector(".js-counter"),
-  form: document.querySelector(".js-form"),
-  imgLoader: document.querySelector(".js-img-loader"),
-  gameContainer: document.querySelector(".js-content"),
-  colorBox: document.querySelector(".js-color-box"),
+  lodashSearch: document.querySelector('.js-lodash'),
+  title: document.querySelector('.js-title'),
+  comment: document.querySelector('.js-comment'),
+  list: document.querySelector('.js-list'),
+  carsList: document.querySelector('.js-cars-list'),
+  carsForm: document.querySelector('.js-cars-form'),
+  addBtn: document.querySelector('.js-add-btn'),
+  subtractBtn: document.querySelector('.js-subtract-btn'),
+  counter: document.querySelector('.js-counter'),
+  form: document.querySelector('.js-form'),
+  imgLoader: document.querySelector('.js-img-loader'),
+  gameContainer: document.querySelector('.js-content'),
+  colorBox: document.querySelector('.js-color-box'),
 };
 const {
   lodashSearch,
@@ -44,7 +47,7 @@ const {
 // }
 
 lodashSearch.addEventListener(
-  "input",
+  'input',
   _.debounce(handlerDebounceSearch, 3000, { leading: true, trailing: true })
 );
 function handlerDebounceSearch(evt) {
@@ -52,7 +55,7 @@ function handlerDebounceSearch(evt) {
 }
 // tic tac toe game
 function gameMarkup() {
-  let gameMarkup = "";
+  let gameMarkup = '';
   for (let i = 0; i < 9; i += 1) {
     gameMarkup += `<div class="item" data-id="${i + 1}"></div>`;
   }
@@ -72,21 +75,21 @@ gameMarkup();
 //   [1, 5, 9],
 //   [3, 5, 7],
 // ];
-gameContainer.addEventListener("click", handlerClickForTikTakToe);
+gameContainer.addEventListener('click', handlerClickForTikTakToe);
 
 //Color box, event bubbling;
-colorBox.addEventListener("click", handlerColorBox);
+colorBox.addEventListener('click', handlerColorBox);
 function handlerColorBox(evt) {
-  if (!evt.target.classList.contains("js-color-item")) {
+  if (!evt.target.classList.contains('js-color-item')) {
     return;
   }
   const box = evt.target.dataset;
 
-  colorBox.insertAdjacentHTML("afterbegin", `<h3> ${box.color}</h3>`);
+  colorBox.insertAdjacentHTML('afterbegin', `<h3> ${box.color}</h3>`);
 }
 
 //Handle input - Name, email, phone. Greeting
-form.addEventListener("submit", handlerSubmit);
+form.addEventListener('submit', handlerSubmit);
 
 function handlerSubmit(evt) {
   evt.preventDefault();
@@ -118,36 +121,36 @@ function createGreeting(name, mail, tel, city, street, age, car) {
   and phone - ${tel.value}.You are ${age.value} years old,  live on ${street.value} in ${city.value} 
   and drives ${car.value}`;
   if (!!name.value) {
-    title.classList.add("title-color");
+    title.classList.add('title-color');
     comment.hidden = true;
   } else {
     title.textContent = `Write your Name`;
-    title.classList.remove("title-color");
+    title.classList.remove('title-color');
     comment.hidden = false;
   }
 }
 
 // Copying forbidding
-document.addEventListener("keydown", handlerCopyKey);
+document.addEventListener('keydown', handlerCopyKey);
 function handlerCopyKey(evt) {
-  if (evt.ctrlKey && evt.code === "KeyC") {
+  if (evt.ctrlKey && evt.code === 'KeyC') {
     evt.preventDefault();
   }
 }
 
 //List creating
-const li = document.createElement("li");
+const li = document.createElement('li');
 
 list.appendChild(li);
 
 const goods = [...list.children];
 
-goods.forEach((good) => {
+goods.forEach(good => {
   good.textContent = `tomato`;
-  good.classList.add("element");
+  good.classList.add('element');
 });
-const listHeader = `<h2>${"Список покупок"}</h2>`;
-list.insertAdjacentHTML("beforebegin", listHeader);
+const listHeader = `<h2>${'Список покупок'}</h2>`;
+list.insertAdjacentHTML('beforebegin', listHeader);
 
 //List loading
 const marKup = galleryItems
@@ -170,13 +173,13 @@ const marKup = galleryItems
         </div>
       </li>`
   )
-  .join(" ");
-imgLoader.insertAdjacentHTML("beforeend", marKup);
+  .join(' ');
+imgLoader.insertAdjacentHTML('beforeend', marKup);
 
 //CArs form and listStyle
-carsList.insertAdjacentHTML("beforeend", createMarkup(cars));
+carsList.insertAdjacentHTML('beforeend', createMarkup(cars));
 
-carsForm.addEventListener("submit", handlerCarsForm);
+carsForm.addEventListener('submit', handlerCarsForm);
 
 function handlerCarsForm(evt) {
   evt.preventDefault();
@@ -187,7 +190,7 @@ function handlerCarsForm(evt) {
   } = evt.currentTarget.elements;
   const queryValue = query.toLowerCase();
 
-  let resultCars = cars.filter((item) => {
+  let resultCars = cars.filter(item => {
     return item[selector].toLowerCase() == queryValue;
   });
 
@@ -197,7 +200,7 @@ function handlerCarsForm(evt) {
 }
 
 function createMarkup(dataArr) {
-  let marKup = "";
+  let marKup = '';
   return (marKup = dataArr
     .map(
       ({ id, model, type, price, img }) => `
@@ -209,14 +212,14 @@ function createMarkup(dataArr) {
     <button type='button' class="js-add">Add</button>
   </li>`
     )
-    .join(""));
+    .join(''));
 }
 
-carsList.classList.add("cars-list");
-carsList.addEventListener("click", handlerClickCar);
+carsList.classList.add('cars-list');
+carsList.addEventListener('click', handlerClickCar);
 function handlerClickCar(evt) {
-  const cardItem = evt.target.closest(".car-item");
-  if (evt.target.classList.contains("js-add")) {
+  const cardItem = evt.target.closest('.car-item');
+  if (evt.target.classList.contains('js-add')) {
     const car = findCardItem(cardItem);
     const instance = basicLightbox.create(createAddCarMurkup(car));
     instance.show();
@@ -249,8 +252,8 @@ function createAddCarMurkup({ model, price } = {}) {
 }
 
 // Add - Subtract -  Buttons
-addBtn.addEventListener("click", handlerAdd);
-subtractBtn.addEventListener("click", handlerSubtract);
+addBtn.addEventListener('click', handlerAdd);
+subtractBtn.addEventListener('click', handlerSubtract);
 let step = 0;
 function handlerAdd() {
   step += 1;
@@ -260,4 +263,22 @@ function handlerSubtract() {
   step -= 1;
   counter.textContent = step;
 }
-export {gameMarkup}
+
+// time in queue
+function queueTime(arr, box) {
+  const obj = {};
+  for (let i = 1; i <= box; i += 1) {
+    obj[i] = 0;
+  }
+  console.log(obj);
+
+  arr.reduce((acc, item) => {
+    acc[Object.values(acc).indexOf(Math.min(...Object.values(acc))) + 1] += item;
+      return acc;
+  }, obj);
+  console.log(obj);
+  return obj;
+}
+queueTime([5, 12, 8, 6, 3, 7, 6, 4, 15, 9], 3);
+
+export { gameMarkup };
