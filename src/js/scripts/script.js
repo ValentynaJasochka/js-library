@@ -238,8 +238,8 @@ function handlerClickCar(evt) {
       }
 
       localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(products));
-      const instance = basicLightbox.create(createAddCarMarkup(car));
-      instance.show();
+      // const instance = basicLightbox.create(createAddCarMarkup(car));
+      // instance.show();
     } else if (cardItem) {
       // const car = findCardItem(cardItem);
       const instance = basicLightbox.create(createDetailInfoMarkup(car));
@@ -252,13 +252,7 @@ function findCardItem(item) {
   const currentCar = cars.find(({ id: carId }) => carId === Number(id));
   return currentCar;
 }
-function createBasketList(product, list) {
-  // console.log(product);
-  // const products =[];
-  // list.push(product);
-  // console.log(JSON.stringify(list));
-  // localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(list))
-}
+
 function createDetailInfoMarkup({ id, img, model, price } = {}) {
   return `<div data-id="${id}" class="modal">
 <img src="${img}" alt="${model}" width ='600'>
@@ -267,13 +261,13 @@ function createDetailInfoMarkup({ id, img, model, price } = {}) {
 <button type='button'>Add</button>
 </div>`;
 }
-function createAddCarMarkup({ model, price } = {}) {
-  return `<div class="card-model"> 
-  <h2>Add to card car</h2>
-  <p>Model: ${model}</p> 
-  <p>Price: ${price}</p> 
-  </div>`;
-}
+// function createAddCarMarkup({ model, price } = {}) {
+//   return `<div class="card-model"> 
+//   <h2>Add to card car</h2>
+//   <p>Model: ${model}</p> 
+//   <p>Price: ${price}</p> 
+//   </div>`;
+// }
 
 // Add - Subtract -  Buttons
 addBtn.addEventListener('click', handlerAdd);
@@ -301,6 +295,6 @@ function queueTime(arr, box) {
   }, obj);
   return obj;
 }
-console.log(queueTime([5, 12, 8, 6, 3, 7, 6, 4, 15, 9], 3));
+
 
 export { gameMarkup,PRODUCT_LS_KEY };

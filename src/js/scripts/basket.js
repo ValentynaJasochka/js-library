@@ -3,10 +3,11 @@ const PRODUCT_LS_KEY = 'basket';
 const selectors = {
   totalPrice: document.querySelector('.js-total-price'),
   basketList: document.querySelector('.js-list'),
+  basketClear: document.querySelector('.js-basket-clear')
 };
-const { totalPrice, basketList } = selectors;
+const { totalPrice, basketList, basketClear} = selectors;
 const products = JSON.parse(localStorage.getItem(PRODUCT_LS_KEY)) || [];
-console.log(products);
+
 const basketCost = products.reduce(
   (acc, { qty, price }) => (acc += qty * price),
   0
@@ -29,4 +30,8 @@ function createMarkup(arr) {
 }
 
 basketList.insertAdjacentHTML('beforeend', createMarkup(products));
-// createMarkup(products)
+basketClear.addEventListener('click', handlerBasketCleaner)
+function handlerBasketCleaner() {
+  localStorage.removeItem(PRODUCT_LS_KEY)
+  window.location.href= '../../index.html'
+}
