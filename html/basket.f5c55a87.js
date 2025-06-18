@@ -1,0 +1,2 @@
+const e={totalPrice:document.querySelector(".js-total-price"),basketList:document.querySelector(".js-list")},{totalPrice:t,basketList:o}=e,c=JSON.parse(localStorage.getItem("basket"))||[];console.log(c);const s=c.reduce(((e,{qty:t,price:o})=>e+t*o),0);t.textContent=`Total price ${s}`,o.insertAdjacentHTML("beforeend",c.map((({model:e,price:t,qty:o,type:c})=>` <li class="basket-list-item">\n        <h2>${e}  ${c}</h2>\n        <p>${o}</p>\n        <p>${o*t}</p>\n      </li>`)).join(""));
+//# sourceMappingURL=basket.f5c55a87.js.map
