@@ -27,90 +27,90 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="main-container">
-      <div class="thecard">
-        <div class="thefront">The Front</div>
-        <div class="theback">The back</div>
+    <div class="page-container">
+      <div class="main-container">
+        <div class="thecard">
+          <div class="thefront">The Front</div>
+          <div class="theback">The back</div>
+        </div>
       </div>
-    </div>
 
-    <h2>LODASH Library</h2>
-    <input type="text" class="js-lodash" />
-    <div class="container">
-      <div class="js-content content"></div>
-    </div>
-    <h1 id="title" class="js-title"></h1>
-    <p class="js-comment">"Введіть ім'я користувача"</p>
-    <form action="submit" class="js-form user-form">
-      <label class="label">
-        Username
-        <input
-          type="text"
-          name="username"
-          class="js-username username-input"
-          placeholder="Tima Anubis"
-          autofocus
-        />
-      </label>
-      <label class="label">
-        Email
-        <input type="email" name="email" class="js-email email-input" />
-      </label>
-      <label class="label">
-        Phone
-        <input type="tel" name="phone" class="js-phone phone-input" />
-      </label>
-      <label class="label">
-        City
-        <input type="text" name="city" class="js-city city-input" />
-      </label>
-      <label class="label">
-        Street
-        <input type="text" name="street" class="js-street street-input" />
-      </label>
-      <label class="label">
-        Age
-        <input type="text" name="age" class="js-age age-input" />
-      </label>
-      <label class="label">
-        Car
-        <input type="text" name="car" class="js-car car-input" />
-      </label>
+      <h2>LODASH Library</h2>
+      <input type="text" class="js-lodash" />
+      <div class="container">
+        <div class="js-content content"></div>
+      </div>
+      <h1 id="title" class="js-title"></h1>
+      <p class="js-comment">"Введіть ім'я користувача"</p>
+      <form action="submit" class="js-form user-form">
+        <label class="label">
+          Username
+          <input
+            type="text"
+            name="username"
+            class="js-username username-input"
+            placeholder="Tima Anubis"
+            autofocus
+          />
+        </label>
+        <label class="label">
+          Email
+          <input type="email" name="email" class="js-email email-input" />
+        </label>
+        <label class="label">
+          Phone
+          <input type="tel" name="phone" class="js-phone phone-input" />
+        </label>
+        <label class="label">
+          City
+          <input type="text" name="city" class="js-city city-input" />
+        </label>
+        <label class="label">
+          Street
+          <input type="text" name="street" class="js-street street-input" />
+        </label>
+        <label class="label">
+          Age
+          <input type="text" name="age" class="js-age age-input" />
+        </label>
+        <label class="label">
+          Car
+          <input type="text" name="car" class="js-car car-input" />
+        </label>
 
-      <button type="submit" class="js-form-btn user-form-btn">Save me</button>
-    </form>
-    <div class="js-color-box color-box">
-      <div class="js-color-item item-green" data-color="green"></div>
-      <div class="js-color-item item-red" data-color="red"></div>
-      <div class="js-color-item item-blue" data-color="blue"></div>
-    </div>
+        <button type="submit" class="js-form-btn user-form-btn">Save me</button>
+      </form>
+      <div class="js-color-box color-box">
+        <div class="js-color-item item-green" data-color="green"></div>
+        <div class="js-color-item item-red" data-color="red"></div>
+        <div class="js-color-item item-blue" data-color="blue"></div>
+      </div>
 
-    <div class="math-container">
-      <button type="button" class="js-add-btn">Add</button>
-      <div class="js-counter">0</div>
-      <button type="button" class="js-subtract-btn">Subtract</button>
+      <div class="math-container">
+        <button type="button" class="js-add-btn">Add</button>
+        <div class="js-counter">0</div>
+        <button type="button" class="js-subtract-btn">Subtract</button>
+      </div>
+      <ul class="js-img-loader nature-photos"></ul>
+      <ul class="js-list">
+        <li class="element">1</li>
+        <li class="element">2</li>
+        <li class="element">3</li>
+        <li class="element">4</li>
+      </ul>
+      <div class="header-cars-container">
+        <form type="submit" class="js-cars-form">
+          <input type="text" name="query" />
+          <select name="select">
+            <option value="model">Марка</option>
+            <option value="type" selected>Модель</option>
+          </select>
+          <button type="submit">Пошук</button>
+        </form>
+        <a href="./html/basket.html">Basket</a>
+      </div>
+      <ul class="js-cars-list" class="cars-list"></ul>
     </div>
-    <ul class="js-img-loader nature-photos">
-     
-    </ul>
-    <ul class="js-list">
-      <li class="element">1</li>
-      <li class="element">2</li>
-      <li class="element">3</li>
-      <li class="element">4</li>
-    </ul>
-    <div class="header-cars-container">
-    <form type="submit" class="js-cars-form">
-      <input type="text" name="query" />
-      <select name="select">
-        <option value="model">Марка</option>
-        <option value="type" selected>Модель</option>
-      </select>
-      <button type="submit">Пошук</button>
-    </form>
-    <a href="./html/basket.html">Basket</a>
-    </div>
-    <ul class="js-cars-list" class="cars-list"></ul>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/lodash.throttle@4.1.1/index.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/lodash.debounce@4.0.8/index.min.js"></script> -->

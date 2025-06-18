@@ -3,6 +3,13 @@
 ul,li {
   list-style: none;
 }
+.page-container {
+  max-width: 1348px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .container {
 display: flex;
 margin: 100px 50px 50px 50px;
@@ -86,6 +93,7 @@ height: 320px;
 }
 .header-cars-container {
   display: flex;
+  max-width: 1000px;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -99,6 +107,12 @@ height: 320px;
 .car-item {
   border: 1px solid navy;
   padding: 5px;
+}
+.basket-list-item {
+  display: flex;
+  flex-direction: row;
+width: 700px;
+justify-content: space-around;
 }
 .user-form {
   display:flex;

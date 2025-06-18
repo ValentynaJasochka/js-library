@@ -1,8 +1,7 @@
-import SimpleLightbox from 'simplelightbox';
+// import SimpleLightbox from 'simplelightbox';
 import {
   handlerClickForTikTakToe,
-  resetGameForTikTakToe,
-  checkWinnerForTikTakToe,
+ 
 } from '../helpers/helper-tiktaktoe';
 
 import { cars } from '../cars';
@@ -228,14 +227,13 @@ function handlerClickCar(evt) {
     const car = findCardItem(cardItem);
     const products = JSON.parse(localStorage.getItem(PRODUCT_LS_KEY)) ?? [];
     if (evt.target.classList.contains('js-add')) {
-      console.log(products);
-      const idx = products.indexOf(({ id }) => id === car.id);
+      const idx = products.findIndex(({ id }) => id === car.id);
 
       if (!!~idx) {
         products[idx].qty += 1;
       } else {
         car.qty = 1;
-        console.log(car);
+
         products.push(car);
       }
 
@@ -305,4 +303,4 @@ function queueTime(arr, box) {
 }
 console.log(queueTime([5, 12, 8, 6, 3, 7, 6, 4, 15, 9], 3));
 
-export { gameMarkup };
+export { gameMarkup,PRODUCT_LS_KEY };
