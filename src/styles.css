@@ -182,3 +182,15 @@ justify-content: space-around;
   border: 2px solid black;
   padding: 20px;
 }
+/* advertising */
+.advertising-block {
+  width: 300px;
+  height: 200px;
+  padding: 40px;
+  border-radius: 5px;
+  border: 3px solid navy;
+  background-color: aquamarine;
+}
+.advertising-text {
+  text-align: center;
+}
