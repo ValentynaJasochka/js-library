@@ -194,3 +194,21 @@ justify-content: space-around;
 .advertising-text {
   text-align: center;
 }
+.calendar {
+  width: 700px;
+  height: 500px;
+  background-image: url(./images/calender/pexels-njeromin-14530327.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  /* column-gap: 40px; */
+  padding-top: 40px;
+  justify-content: space-between;
+
+}
+.date-style {
+  color: red;
+  font-size: 24px;
+}
