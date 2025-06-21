@@ -230,3 +230,50 @@ li {
   font-size: 30px;
   align-self: center;
 }
+.clock {
+  width: 350px;
+  height: 350px;
+  background-image: url(https://i.ibb.co/dBGxSK1/hiclipart-com-3.png);
+  background-color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  border-radius: 50%;
+  position: relative;
+  align-self: center;
+  /* left: 525px; */
+}
+.clock-arrow{
+  position: absolute;
+  background-color: black;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.clock-center {
+  position: absolute;  
+  background-color: black;
+  top: 168px;
+  left: 165px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+}
+.clock-seconds__arrow {
+  bottom: 50%;
+  left: 50%;
+  width: 5px;
+  height: 40%;
+}
+.clock-minutes__arrow {
+  bottom: 50%;
+  left: 50%;
+  width: 7px;
+  height: 33%;
+}
+.clock-hours__arrow {
+  bottom: 50%;
+  left: 50%;
+  width: 12px;
+  height: 24%;
+}
