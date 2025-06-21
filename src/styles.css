@@ -1,6 +1,5 @@
-
-
-ul,li {
+ul,
+li {
   list-style: none;
 }
 .page-container {
@@ -11,8 +10,8 @@ ul,li {
   margin-right: auto;
 }
 .container {
-display: flex;
-margin: 100px 50px 50px 50px;
+  display: flex;
+  margin: 100px 50px 50px 50px;
 }
 .content {
   width: 153px;
@@ -20,10 +19,10 @@ margin: 100px 50px 50px 50px;
   margin: 0 auto;
 }
 .main-container {
-position: relative;
-width: 500px;
-height: 320px;
-background: lightblue;
+  position: relative;
+  width: 500px;
+  height: 320px;
+  background: lightblue;
 }
 .thecard {
   position: absolute;
@@ -31,7 +30,7 @@ background: lightblue;
   height: 100%;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
-  background:  yellow;
+  background: yellow;
 }
 .thecard:hover,
 .thecard:focus {
@@ -39,7 +38,7 @@ background: lightblue;
 }
 .img-box {
   width: 500px;
-height: 320px;
+  height: 320px;
 }
 .inform-box {
   display: flex;
@@ -63,7 +62,7 @@ height: 320px;
   background: lightblue;
   transform: rotateY(180deg);
 }
-.item{
+.item {
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -79,7 +78,7 @@ height: 320px;
   height: 200px;
   background-color: aquamarine;
   text-align: center;
-  }
+}
 .title-color {
   color: red;
 }
@@ -89,7 +88,7 @@ height: 320px;
 .math-container {
   display: flex;
   flex-direction: row;
- column-gap: 30px;
+  column-gap: 30px;
 }
 .header-cars-container {
   display: flex;
@@ -98,7 +97,7 @@ height: 320px;
   justify-content: space-between;
 }
 .cars-list {
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 20px;
@@ -111,11 +110,11 @@ height: 320px;
 .basket-list-item {
   display: flex;
   flex-direction: row;
-width: 700px;
-justify-content: space-around;
+  width: 700px;
+  justify-content: space-around;
 }
 .user-form {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   row-gap: 30px;
@@ -123,7 +122,7 @@ justify-content: space-around;
   margin-bottom: 30px;
 }
 .label {
-  display:flex;
+  display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
@@ -138,19 +137,19 @@ justify-content: space-around;
 }
 .user-form-btn:hover,
 .user-form-btn:focus {
-  background-color:aquamarine;
+  background-color: aquamarine;
 }
 .nature-photos {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px
+  gap: 20px;
 }
 .photo {
   width: 500px;
 }
 .color-box {
   display: flex;
-  flex-direction: row ;
+  flex-direction: row;
   gap: 30px;
   padding: 30px;
 }
@@ -160,7 +159,7 @@ justify-content: space-around;
   background-color: green;
   cursor: pointer;
 }
-.item-red{
+.item-red {
   width: 80px;
   height: 80px;
   background-color: red;
@@ -172,7 +171,7 @@ justify-content: space-around;
   background-color: blue;
   cursor: pointer;
 }
-.modal{
+.modal {
   background-color: aliceblue;
   border: 2px solid black;
   padding: 20px;
@@ -195,20 +194,39 @@ justify-content: space-around;
   text-align: center;
 }
 .calendar {
-  width: 700px;
+  width: 900px;
   height: 500px;
   background-image: url(./images/calender/pexels-njeromin-14530327.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  flex-direction: row;
-  /* column-gap: 40px; */
+}
+.overlay {
+ 
+  height: 100%;
+  width: 100%;
+  background-color: rgba(191, 168, 168, 0.8); 
+  z-index: 1;
   padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+.date-container {
+   display: flex;
+  flex-direction: row;
 
+  justify-content: space-around;
 }
 .date-style {
   color: red;
   font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.digital-clock {
+  font-size: 30px;
+  align-self: center;
 }

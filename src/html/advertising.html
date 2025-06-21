@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advertising</title>
-   <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advertising</title>
+    <link
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
       rel="stylesheet"
     />
@@ -18,21 +18,38 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
-</head>
-<body>
-  <div class="page-container">
-    <a href="../index.html">Home</a>
-   <div class="advertising-block">
-    <span class="advertising-text"></span>
-   </div>
-  </div>
-  <div class="calendar">
-    <div class="date-style">День тижня:<div class="date-day"></div></div>
-    <div class="date-style">День місяця:<div class="date"></div></div>
-    <div class="date-style">Місяць:<div class="date-month"></div></div>
-    <div class="date-style">Рік:<div class="date-year"></div></div>
-  </div>
-  
-  <script src="../js/scripts/advertising.js" type="module"></script>
-</body>
+  </head>
+  <body>
+    <div class="page-container">
+      <a href="../index.html">Home</a>
+      <div class="advertising-block">
+        <span class="advertising-text"></span>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="overlay">
+        <div class="date-container">
+          <div class="date-style">
+          День тижня:
+          <div class="date-day"></div>
+        </div>
+        <div class="date-style">
+          День місяця:
+          <div class="date"></div>
+        </div>
+        <div class="date-style">
+          Місяць:
+          <div class="date-month"></div>
+        </div>
+        <div class="date-style">
+          Рік:
+          <div class="date-year"></div>
+        </div>
+        </div>
+        <div class="js-digital-clock digital-clock"></div>
+      </div>
+    </div>
+
+    <script src="../js/scripts/advertising.js" type="module"></script>
+  </body>
 </html>
