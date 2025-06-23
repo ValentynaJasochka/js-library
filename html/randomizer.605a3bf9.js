@@ -1,0 +1,2 @@
+const t={btn:document.querySelector(".js-btn"),box:document.querySelector(".js-container"),field:document.querySelector(".js-item")},{btn:e,box:n,field:o}=t;function c(t){return new Promise(((t,e)=>{setInterval((()=>{Math.random()>.5?t("OK"):e("NO")}),1e3)}))}e.addEventListener("click",(function(){[...n.children].map(((t,e)=>{c(e).than((e=>{t.textContent=e})).catch((e=>{t.textContent=e}))}))})),console.log(c().than((t=>`OK ${t}`)).catch((t=>`NOOO ${t}`)));
+//# sourceMappingURL=randomizer.605a3bf9.js.map
