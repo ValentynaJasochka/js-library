@@ -72,3 +72,10 @@ setInterval(() => {
   hours.style.transform= `rotate(${hourDeg}deg)`;
   
 }, 1000);
+
+for (var i = 0; i <3; i+=1) {
+const c =i;
+  setTimeout(() =>console.log(c), 0)
+}
+// var i
+// setTimeout(()=>{for ( i = 0; i <3; i+=1) {console.log(i)}}, 1000)
