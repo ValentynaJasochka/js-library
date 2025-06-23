@@ -303,4 +303,8 @@ li {
   height: 60px;
   border: 2px solid navy;
   border-radius: 5px;
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+  font-size: 30px;
 }
