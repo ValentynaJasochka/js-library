@@ -278,10 +278,13 @@ li {
   width: 12px;
   height: 24%;
 }
+.btn-container  {
+  display: flex;
+  flex-direction: row;
+ justify-content:space-around;
+}
 .randomizer-btn {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   padding: 10px;
   border: navy;
   background-color: rgb(178, 201, 221);
@@ -307,4 +310,16 @@ li {
   padding-top: 10px;
   justify-content: center;
   font-size: 30px;
+}
+.randomizer-modal {
+  width: 600px;
+  height: 500px;
+  padding: 200px;
+  background-color: beige;
+  color: blue;
+  font-size: 40px;
+  text-align: center;
+  border: 3px solid green;
+  border-radius: 20px;
+
 }
