@@ -15,7 +15,6 @@ function handlerSlotsBtn() {
   } else if (gameItems > 11) {
     alert('You can enter les 11 slots');
   } else {
-    console.log(boxMarkup(gameItems));
     box.innerHTML = '';
     box.insertAdjacentHTML('beforeend', boxMarkup(gameItems));
   }
