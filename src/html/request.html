@@ -27,6 +27,17 @@
   <body>
     <div class="page-container">
       <a href="../index.html">Home</a>
+      <form action="submit" class="js-weather">
+        <input type="text" name="query" />
+        <select name="days">
+          <option value="3">3</option>
+          <option value="5">5</option>
+          <option value="7">7</option>
+          <option value="14">14</option>
+        </select>
+        <button type="button">Submit</button>
+      </form>
+      <ul class="js-weather-list"></ul>
     </div>
 
     <script src="../js/scripts/request.js" type="module"></script>
