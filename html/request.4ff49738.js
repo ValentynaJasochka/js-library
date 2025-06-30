@@ -1,2 +1,0 @@
-const e={form:document.querySelector(".js-weather"),weatherList:document.querySelector(".js-weather-list")},{form:t,weatherList:o}=e;fetch("http://api.weatherapi.com/v1/forecast.json?key=d6ef5733ea0c4b55952125610252606&q=Krakow&days=3").then((e=>{if(!e.ok)throw new Error(e.statusText);return e.json()})).then((e=>console.log(e))).catch((e=>console.log(e))),t.addEventListener("submit",(function(e){}));
-//# sourceMappingURL=request.4ff49738.js.map
