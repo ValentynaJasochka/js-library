@@ -1,0 +1,2 @@
+!function(){var t={form:document.querySelector(".js-weather"),weatherList:document.querySelector(".js-weather-list")},e=t.form;fetch("".concat("http://api.weatherapi.com/v1").concat("/forecast.json","?key=").concat("d6ef5733ea0c4b55952125610252606","&q=Krakow&days=3")).then((function(t){if(!t.ok)throw new Error(t.statusText);return t.json()})).then((function(t){return console.log(t)})).catch((function(t){return console.log(t)})),e.addEventListener("submit",(function(t){}))}();
+//# sourceMappingURL=request.44081ff4.js.map
