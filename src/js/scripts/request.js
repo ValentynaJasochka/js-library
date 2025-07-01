@@ -3,6 +3,7 @@
 const API_Key = 'd6ef5733ea0c4b55952125610252606';
 const BASE_URL = 'http://api.weatherapi.com/v1';
 const EndPOINT = '/forecast.json';
+const BRN_Tokien = 'ShvEHHIdjxODJbTBL1Tm'
 const selectors = {
   form: document.querySelector('.js-weather'),
   weatherList: document.querySelector('.js-weather-list'),
