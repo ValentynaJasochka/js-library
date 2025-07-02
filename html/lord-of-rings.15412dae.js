@@ -1,2 +1,0 @@
-const e={form:document.querySelector(".js-weather"),weatherList:document.querySelector(".js-weather-list")},{form:t,weatherList:o}=e;fetch("https://the-one-api.dev/v2/character",{headers:{Authorization:"Bearer ShvEHHIdjxODJbTBL1Tm","Content-Type":"application/json"}}).then((e=>{if(!e)throw new Error(e.statusText);return e.json()})).then((e=>console.log(e))).catch((e=>console.log(e)));
-//# sourceMappingURL=lord-of-rings.15412dae.js.map
