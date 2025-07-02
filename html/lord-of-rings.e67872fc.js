@@ -1,0 +1,2 @@
+!function(){document.querySelector(".js-weather"),document.querySelector(".js-weather-list");var t={headers:{Authorization:"Bearer ".concat("ShvEHHIdjxODJbTBL1Tm"),"Content-Type":"application/json"}};fetch("".concat("https://the-one-api.dev/v2").concat("/character"),t).then((function(t){if(!t)throw new Error(t.statusText);return t.json()})).then((function(t){return console.log(t)})).catch((function(t){return console.log(t)}))}();
+//# sourceMappingURL=lord-of-rings.e67872fc.js.map
