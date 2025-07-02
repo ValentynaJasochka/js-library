@@ -323,3 +323,26 @@ li {
   border-radius: 20px;
 
 }
+.movie-list {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 20px;
+}
+.movie-card {
+  background-color: aliceblue;
+  border: 2px solid navy;
+  border-radius: 10px;
+  padding: 10px;
+}
+.movie-img {
+  display: inline-block;
+  width: 300px;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.movie-name {
+  width: 270px;
+}
