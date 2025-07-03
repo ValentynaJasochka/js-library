@@ -38,30 +38,33 @@ const options = {
 let page = 1;
 let observer = new IntersectionObserver(handlerPagination, options);
 function handlerPagination(entries, observer) {
-   entries.forEach(entry => {
-       if (entry.isIntersecting) {      
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
       page += 1;
       serviceMovie(page)
         .then(data => {
           movieList.insertAdjacentHTML('beforeend', createMarkup(data.results));
+          if (data.page >= data.total_pages) {
+            observer.unobserve(entry.target);
+          }
         })
         .catch(err => console.log(err));
     }
   });
 }
 
-load.addEventListener('click', onLoadMore);
-function onLoadMore() {
-  page += 1;
-  serviceMovie(page)
-    .then(data => {
-      movieList.insertAdjacentHTML('beforeend', createMarkup(data.results));
-      if (data.page >= data.total_pages) {
-        load.hidden = true;
-      }
-    })
-    .catch(err => console.log(err));
-}
+// load.addEventListener('click', onLoadMore);
+// function onLoadMore() {
+//   page += 1;
+//   serviceMovie(page)
+//     .then(data => {
+//       movieList.insertAdjacentHTML('beforeend', createMarkup(data.results));
+//       if (data.page >= data.total_pages) {
+//         load.hidden = true;
+//       }
+//     })
+//     .catch(err => console.log(err));
+// }
 function serviceMovie(page = 1) {
   return fetch(`${BASE_URL}${EndPOINT}?api_key=${API_Key}&page=${page}`).then(
     resp => {
@@ -78,9 +81,12 @@ serviceMovie(page)
     observer.observe(target);
     if (data.page < data.total_pages) {
       // load.hidden = false;
+      observer.observe(target);
     }
   })
-  .catch(err => console.log(err));
+  .catch(() => location.href ='../../error.html');
+
+
 function createMarkup(arr) {
   return arr
     .map(({ poster_path, release_date, original_title, vote_average }) => {
