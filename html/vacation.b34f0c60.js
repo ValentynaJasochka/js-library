@@ -1,0 +1,2 @@
+const e={form:document.querySelector(".js-search"),formContainer:document.querySelector(".js-form-container"),addField:document.querySelector(".js-add")},{form:t,formContainer:n,addField:r}=e;r.addEventListener("click",(function(){n.insertAdjacentHTML("beforeend",' <input type="text" name="country" />')})),t.addEventListener("submit",(function(e){e.preventDefault();const n=new FormData(e.currentTarget).getAll("country").map((e=>e.trim())).filter((e=>e));console.log(n),t.reset()}));
+//# sourceMappingURL=vacation.b34f0c60.js.map
