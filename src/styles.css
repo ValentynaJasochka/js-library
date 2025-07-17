@@ -347,3 +347,8 @@ li {
 .movie-name {
   width: 270px;
 }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}

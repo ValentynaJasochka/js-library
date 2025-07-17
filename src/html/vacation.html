@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vacation</title>
-  <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vacation</title>
+    <link
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
       rel="stylesheet"
     />
@@ -13,13 +13,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
-</head>
-<body>
-  <div class="page-container">
+  </head>
+  <body>
+    <div class="page-container">
       <a href="../index.html">Home</a>
-     
+      <form type="submit" class="js-search">
+        <div class="js-form-container form-container">
+          <input type="text" name="country" />
+        </div>
+        
+        <button>Пошук</button>
+      </form>
+      <button type="button" class="js-add">Додати країну</button>
     </div>
 
     <script src="../js/scripts/vacation.js" type="module"></script>
-</body>
+  </body>
 </html>
