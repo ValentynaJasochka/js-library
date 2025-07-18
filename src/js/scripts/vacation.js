@@ -2,8 +2,9 @@ const selectors = {
   form: document.querySelector('.js-search'),
   formContainer: document.querySelector('.js-form-container'),
   addField: document.querySelector('.js-add'),
+  list: document.querySelector('.js-list-container'),
 };
-const { form, formContainer, addField } = selectors;
+const { form, formContainer, addField, list } = selectors;
 
 addField.addEventListener('click', handlerAdd);
 form.addEventListener('submit', handlerSearch);
@@ -20,11 +21,16 @@ async function handlerSearch(evt) {
     .getAll('country')
     .map(item => item.trim())
     .filter(item => item);
-  console.log(countries);
+ 
   form.reset();
+  try{
   const capitals = await serviceCountry(countries);
- const weather = await serviceWeather(capitals)
-  console.log( weather);
+  const weather = await serviceWeather(capitals);
+  list.innerHTML = createMarkup(weather);
+  } catch(err) {console.log(err);}
+
+  
+ 
 }
 
 async function serviceCountry(arr) {
@@ -53,8 +59,8 @@ async function serviceWeather(capitals) {
   });
   // console.log(responses);
   const data = await Promise.allSettled(responses);
-    console.log(data);
-const weather =  data
+  console.log(data);
+  const weather = data
     .filter(({ status }) => status === 'fulfilled')
     .map(
       ({
@@ -65,10 +71,24 @@ const weather =  data
           },
           location: { country, name },
         },
-      }) => {return { country, name, text, temp_c, icon }
+      }) => {
+        return { country, name, text, temp_c, icon };
       }
     );
-    return weather;
+  return weather;
+}
+function createMarkup(arr) {
+  return arr.map(
+    ({ country, name, text, temp_c, icon }) => `
+   <li>
+          <img src="${icon}" alt="${text}"/>
+          <h2>${name}</h2>
+          <h2>${country}</h2>
+          <p>${temp_c}</p>
+          <p>${text}</p>
+          <p></p>
+        </li>`
+  );
 }
 
 // const service = {
